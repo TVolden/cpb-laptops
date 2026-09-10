@@ -20,6 +20,7 @@ let
     "slope2-game.io"
     "slope2.online"
     "slope2run.io"
+    "crazygames.com"
   ];
   names = lib.unique (lib.concatMap (d: [ d "www.${d}" ]) blockedDomains);
 in
