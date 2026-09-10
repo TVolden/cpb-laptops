@@ -5,6 +5,7 @@
   inputs.nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
   inputs.sops-nix.url = "github:Mic92/sops-nix";
   inputs.sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
 
   outputs =
     {
@@ -12,6 +13,7 @@
       disko,
       nixos-facter-modules,
       sops-nix,
+      nix-flatpak,
       ...
     }:
     let
@@ -65,6 +67,7 @@
           modules = [
             disko.nixosModules.disko
             sops-nix.nixosModules.sops
+            nix-flatpak.nixosModules.nix-flatpak
             ./modules/configuration.nix
             nixos-facter-modules.nixosModules.facter
             {

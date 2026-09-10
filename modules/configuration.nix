@@ -25,6 +25,7 @@ in
     ./spike.nix
     ./microbit.nix
     ./inkscape.nix
+    ./bambu-studio.nix
     ./speakers.nix
     ./autoupgrade.nix
   ];
@@ -49,6 +50,8 @@ in
           "chromium-browser.desktop"
           "org.inkscape.Inkscape.desktop"
           "org.kde.krita.desktop"
+          "tinkercad.desktop"
+          "com.bambulab.BambuStudio.desktop"
           "koderup-upgrade.desktop"
         ];
       };
