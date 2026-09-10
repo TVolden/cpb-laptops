@@ -14,6 +14,8 @@ let
     "claude.ai"
     "gemini.google.com"
     "grok.com"
+    "slope3.com"
+    "slopeio.org"
   ];
   names = lib.unique (lib.concatMap (d: [ d "www.${d}" ]) blockedDomains);
 in
