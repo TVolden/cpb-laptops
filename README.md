@@ -1,4 +1,5 @@
-# cpj-laptops
+# Coding Pirates Laptops
+## (cpb-laptops)
 
 This project is free software under the [GNU General Public License v3.0 or later](LICENSE).
 
