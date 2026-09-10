@@ -23,7 +23,7 @@
     "nix-flatpak": {
       "locked": {
         "lastModified": 1767983141,
-        "narHash": "sha256-hWdJIQjkoRTuM2AD4dnMyKxBE8SBGOOjY+lnLZoePlo=",
+        "narHash": "sha256-7ZCulYUD9RmJIDULTRkGLSW1faMpDlPKcbWJLYHoXcs=",
         "owner": "gmodena",
         "repo": "nix-flatpak",
         "rev": "440818969ac2cbd77bfe025e884d0aa528991374",
