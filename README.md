@@ -54,7 +54,7 @@ See [Resetting laptops](#resetting-laptops) for the full default Dash list.
 
 ### Resetting laptops
 
-The Dash (dock) defaults to Files, Terminal, Firefox, Brave, Chromium, Inkscape, Krita, and **Opdater system**. Users can pin extra apps or remove these.
+The Dash (dock) defaults to Files, Terminal, Firefox, Brave, Chromium, Inkscape, Krita, Tinkercad, Bambu Studio, and **Opdater system**. Users can pin extra apps or remove these.
 
 Reset the Dash to that default list (as the logged-in user, or `sudo -u anon`):
 
@@ -197,6 +197,19 @@ Ask for the account.
 Inkscape with extensions:
 
 - [Ink/Stitch](https://inkstitch.org/)
+
+#### 3D print
+
+[`modules/bambu-studio.nix`](modules/bambu-studio.nix) adds:
+
+- **Bambu Studio**, the slicer for BambuLab printers, installed as the prebuilt
+  [Flathub](https://flathub.org/apps/com.bambulab.BambuStudio) app via
+  [nix-flatpak](https://github.com/gmodena/nix-flatpak) (flake input, pinned).
+  Building it from nixpkgs would compile a large unfree tree on every laptop, so
+  we take the prebuilt binary instead. It installs on activation and refreshes
+  on a weekly timer.
+- **Tinkercad**, a Dash launcher that opens [tinkercad.com](https://www.tinkercad.com/)
+  as a Chromium app window.
 
 
 ### Browsers
