@@ -16,6 +16,10 @@ let
     "grok.com"
     "slope3.com"
     "slopeio.org"
+    "slope2-game.com"
+    "slope2-game.io"
+    "slope2.online"
+    "slope2run.io"
   ];
   names = lib.unique (lib.concatMap (d: [ d "www.${d}" ]) blockedDomains);
 in
