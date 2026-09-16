@@ -6,3 +6,9 @@ rebuild HOST:
 provision HOST TARGET=default_target:
     mkdir -p ./hosts/{{HOST}}
     nix run github:nix-community/nixos-anywhere -- --generate-hardware-config nixos-facter ./hosts/{{HOST}}/facter.json --extra-files nixos-anywhere-extra-files --flake ".#{{HOST}}" --target-host "root@{{TARGET}}"
+
+test:
+    ./scripts/eval-hosts.sh
+
+test-full:
+    ./scripts/eval-hosts.sh --all

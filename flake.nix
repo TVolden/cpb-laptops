@@ -60,6 +60,13 @@
         text = builtins.readFile ./scripts/share-eth.sh;
       };
 
+      # Administrator laptop only: evaluate host configs without building.
+      eval-hosts = pkgs.writeShellApplication {
+        name = "eval-hosts";
+        runtimeInputs = with pkgs; [ coreutils ];
+        text = builtins.readFile ./scripts/eval-hosts.sh;
+      };
+
       # Shared managed-laptop config; hostname, facter, and optional hosts/<name> modules differ.
       mkLaptop =
         hostname:
@@ -81,11 +88,19 @@
     {
       nixosConfigurations = lib.genAttrs hostnames mkLaptop;
 
-      packages.${system}.share-eth = share-eth;
+      packages.${system} = {
+        inherit share-eth eval-hosts;
+      };
 
-      apps.${system}.share-eth = {
-        type = "app";
-        program = "${share-eth}/bin/share-eth";
+      apps.${system} = {
+        share-eth = {
+          type = "app";
+          program = "${share-eth}/bin/share-eth";
+        };
+        eval-hosts = {
+          type = "app";
+          program = "${eval-hosts}/bin/eval-hosts";
+        };
       };
 
       devShells.${system}.default = pkgs.mkShell {
@@ -95,6 +110,7 @@
           ssh-to-age
           openssl
           share-eth
+          eval-hosts
         ];
       };
     };

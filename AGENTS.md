@@ -12,3 +12,4 @@
   - librewolf is completely unmanaged
   - chromium does not have blocked websites
 - Dont check the entire flake, but rather parts of it, due to memory constraints
+- Just rules should be implemented as one liners that may call scripts in the repo
