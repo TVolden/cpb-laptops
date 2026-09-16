@@ -42,8 +42,8 @@ let
     "kongregate.com"
     "armorgames.com"
     "lagged.com"
-    "kevin.games",
-    "itch.io",
+    "kevin.games"
+    "itch.io"
 
     # "Unblocked games" hubs
     "classroom6x.com"
