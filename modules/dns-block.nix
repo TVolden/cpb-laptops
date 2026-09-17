@@ -45,6 +45,20 @@ let
     "kevin.games"
     "itch.io"
 
+    # Unity WebGL / HTML5 game platforms and CDNs (many "unblocked games"
+    # mirrors just embed one of these underneath)
+    "simmer.io"
+    "unityroom.com"
+    "gamedistribution.com"
+    "gamepix.com"
+    "famobi.com"
+    "html5games.com"
+    "twoplayergames.org"
+    "girlsgogames.com"
+    "gahe.com"
+    "gameflare.com"
+    "brightestgames.com"
+
     # "Unblocked games" hubs
     "classroom6x.com"
     "unblockedgames.com"
@@ -77,6 +91,30 @@ let
     "retrobowl.me"
     "retro-bowl.com"
     "coolgamesfree.org"
+
+    # ".io games" (browser multiplayer genre named after the TLD)
+    "agar.io"
+    "slither.io"
+    "diep.io"
+    "krunker.io"
+    "paper.io"
+    "paper-io.com"
+    "shellshock.io"
+    "surviv.io"
+    "wilds.io"
+    "zombsroyale.io"
+    "venge.io"
+    "starve.io"
+    "florr.io"
+    "moomoo.io"
+    "deeeep.io"
+    "hole.io"
+    "ev.io"
+    "powerline.io"
+    "mope.io"
+    "wormax.io"
+    "generals.io"
+    "skribbl.io"
   ];
   names = lib.unique (lib.concatMap (d: [ d "www.${d}" ]) blockedDomains);
 in

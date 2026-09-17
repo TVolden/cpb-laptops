@@ -33,6 +33,17 @@ in
           "*://*.youtu.be/*"
           "*://youtube-nocookie.com/*"
           "*://*.youtube-nocookie.com/*"
+
+          # Unity WebGL build output has near-constant file naming regardless
+          # of which site embeds it, so this blocks it on any host (unlike
+          # modules/dns-block.nix, which only reaches domains we've already
+          # named). Chromium/Brave's URLBlocklist policy cannot do mid-path
+          # wildcard matching, so this is Firefox-only.
+          "*://*/*.loader.js"
+          "*://*/*.framework.js"
+          "*://*/*.unityweb"
+          "*://*/*Build/*.wasm"
+          "*://*/*Build/*.data*"
         ];
       };
 
