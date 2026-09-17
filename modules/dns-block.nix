@@ -76,6 +76,7 @@ let
     "1v1.lol"
     "retrobowl.me"
     "retro-bowl.com"
+    "coolgamesfree.org"
   ];
   names = lib.unique (lib.concatMap (d: [ d "www.${d}" ]) blockedDomains);
 in
