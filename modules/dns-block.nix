@@ -72,6 +72,7 @@ let
     # Cloud gaming / in-browser proxies (used to bypass other blocks)
     "now.gg"
     "mathsspot.com"
+    "neal.fun"
 
     # Roblox
     "roblox.com"
