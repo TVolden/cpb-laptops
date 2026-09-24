@@ -67,6 +67,8 @@ let
     "unblockedgames77.com"
     "unblockedgames911.com"
 
+    "whatbeatsrock.com"
+
     # Cloud gaming / in-browser proxies (used to bypass other blocks)
     "now.gg"
     "mathsspot.com"
