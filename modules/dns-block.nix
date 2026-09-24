@@ -117,6 +117,8 @@ let
     "wormax.io"
     "generals.io"
     "skribbl.io"
+    "1001games.com"
+    "freegames.com"
   ];
   names = lib.unique (lib.concatMap (d: [ d "www.${d}" ]) blockedDomains);
 in
